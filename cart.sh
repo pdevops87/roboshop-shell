@@ -11,7 +11,7 @@ cp cart.service /etc/systemd/system/cart.service
 
 cd /app
 unzip /tmp/cart.zip
-
+cd /app
 npm install
 
 systemctl daemon-reload
