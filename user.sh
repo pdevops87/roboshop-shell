@@ -12,3 +12,8 @@ cd /app
 unzip /tmp/user.zip
 npm install
 
+
+systemctl daemon-reload
+systemctl enable user
+systemctl restart user
+
