@@ -2,3 +2,47 @@ this is a sample
 
 BASEOS
 APPSTREAM
+
+
+
+sed '/^bind/ s/127.0.0.1/0.0.0.0/'
+
+to change complete line
+sed '/protected-mode/ c /protected-mode no' | grep protected-no  /etc,
+
+ss -lntp, to open ports
+
+
+sudo sed -i '/^bind/ s/127.0.0.1/0.0.0.0/' | sudo grep ^bind  /etc/redis/redis.conf
+
+
+colors:
+------
+RGYBMC
+Red-31
+Green-32
+Yellow-33
+Blue-34
+Magenta-35
+Cyan-36
+echo -e \\e[31mHello World; hello ;;;; prints both text in red color
+to apply the color for the firs text use \\e[0m
+echo -e \\e[31mHello World\\e[0m; Hrllo,  here -e is for enable the text ,\\e to enable the color
+
+
+echo $PS1
+ls -l /boot 1>/tmp/out 2>/tmp/out, here 1 is to display an output and 2 is an error to redirect output to /tmp/out
+ls -l /boot >/tmp/out 2>/tmp/out, this and above command both are same
+to keep both output and error use the below command:
+ls -l /boot &>/tmp/out, here &> is both for output and an error
+ls -l /boot 1>/tmp/out 2>&1, to append error in /tmp/out
+cat <file.txt means to read the content from file.txt and display by cat command
+syntax: command <filename , input redirects works for only commands
+take output from the command and store it into a file use >stdout(/tmp/out)
+sometimes we don't want to store data into a disk at that time we use &>/dev/null
+ls &>/dev/null
+how do we know whether the command executes properly or not?
+use exit status
+echo $? -0 success other than failure
+
+
